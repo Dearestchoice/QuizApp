@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>General Knowledge Quiz</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-container">
+    <!-- All content is in one main container -->
+    <div id="main-content">
+      <!-- Start Screen -->
+      <div id="start-screen" class="screen">
+        <h1>General Knowledge Quiz</h1>
+        <p>
+          Test your knowledge on general topics. You have 20 seconds per question.
+          Once you select an answer or time runs out, you cannot change your choice.
+        </p>
+        <button id="start-btn" class="btn primary-btn">Start Quiz</button>
+      </div>
+      
+      <!-- Quiz Screen -->
+      <div id="quiz-screen" class="screen" style="display: none;">
+        <!-- Top bar with timer -->
+        <div class="top-bar">
+          <div id="timer-display" class="timer">
+            Time Left: <span id="timer">20</span> sec
+          </div>
+        </div>
+        
+        <!-- Question Section -->
+        <div id="question-container" class="question-container">
+          <p id="question" class="question-text">Question text will appear here</p>
+        </div>
+        
+        <!-- Answer Buttons (each appears as a full-width large button) -->
+        <div id="answer-buttons" class="btn-container"></div>
+        
+        <!-- Next Button -->
+        <button id="next-btn" class="btn secondary-btn" style="display: none;">Next</button>
+        
+        <!-- Progress and Score Info -->
+        <div id="progress-tab" class="progress-tab">
+          Answered: <span id="answered">0</span> | Remaining: <span id="remaining">50</span>
+        </div>
+        <p id="score-display" class="score">Score: 0</p>
+      </div>
+    </div>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
